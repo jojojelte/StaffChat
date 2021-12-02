@@ -1,0 +1,20 @@
+name: StaffChat
+version: '${project.version}'
+main: me.jojojelte.staffchat.Main
+api-version: 1.17
+authors: [jojojelte]
+description: A simple staff chat plugin! Acces staff chat via /sc [message] to easily communicate with other staff members
+website: www.jeltevdv.nl
+commands:
+  sc:
+    description: Use the staffchat!
+    usage: /sc [message]
+    aliases: [staffchat]
+  screload:
+    description: Reload the config!
+    usage: /screload
+    aliases: [staffchatreload, scr]
+  ac:
+    description: Use the adminchat!
+    usage: /ac [message]
+    aliases: [adminchat]

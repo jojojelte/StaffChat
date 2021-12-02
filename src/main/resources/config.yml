@@ -1,0 +1,18 @@
+# StaffChat
+# Version 1.0
+# Developed by jojojelte
+
+# DEFAULT MESSAGE: [StaffChat] %player_name%: %message%
+# AN OVERVIEW OF ALL MINECRAFT COLOR CODES CAN BE FOUND HERE: https://www.digminecraft.com/lists/color_list_pc.php
+
+
+# CHANGE THE COLORS FOR REGULAR STAFFCHAT
+color:
+  textcolor: d
+  nickcolor: 5
+
+# CHANGE THE COLORS FOR ADMIN CHAT
+admincolor:
+  textcolor: c
+  nickcolor: 4
+
