@@ -54,7 +54,7 @@ public class SendCommand implements CommandExecutor {
                 c2 = ChatColor.getByChar(nickcolor);
 
                 for (Player current : Bukkit.getOnlinePlayers()){
-                    if (current.hasPermission("staffchat.use") || current.isOp() || current.hasPermission("staffchat.*")){
+                    if (current.hasPermission("staffchat.staffchat") || current.isOp() || current.hasPermission("staffchat.*")){
                         current.sendMessage(c1 + "[" + white+ "StaffChat" + c1 + "]" + " " + c2+ playerName + white + ": " + c1 + content);
                     }
                 }
