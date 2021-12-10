@@ -25,7 +25,7 @@ public class SendCommand implements CommandExecutor {
 
             FileConfiguration config = main.getConfig();
 
-            if (player.isOp() || player.hasPermission("staffchat.use") || player.hasPermission("staffchat.*")) {
+            if (player.isOp() || player.hasPermission("staffchat.staffchat") || player.hasPermission("staffchat.*")) {
                 String playerName = player.getName();
 
                 StringBuilder sb = new StringBuilder();

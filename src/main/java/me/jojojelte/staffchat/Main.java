@@ -7,7 +7,6 @@ import me.jojojelte.staffchat.commands.updateChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Server;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -28,15 +27,15 @@ public final class Main extends JavaPlugin {
 
         System.out.println("[StaffChat] StaffChat can now be used.");
         getServer().getPluginCommand("sc").setExecutor(new SendCommand(this));
-        getServer().getPluginCommand("screload").setExecutor(new Reload(this));
         getServer().getPluginCommand("ac").setExecutor(new AdminChat(this));
+        getServer().getPluginCommand("screload").setExecutor(new Reload(this));
 
         new updateChecker(this, 98171).getVersion(version -> {
             if (this.getDescription().getVersion().equals(version)) {
-                getLogger().info("There is not a new update available.");
+                getLogger().info("There is no new update available.");
             } else {
                 newUpdate = true;
-                getLogger().info("There is a new update available! Check it out at: https://www.spigotmc.org/resources/staffchat.98171/");
+                getLogger().info("A new update is available: \n» https://www.spigotmc.org/resources/staffchat.98171/");
             }
         });
         registerEvents();
@@ -62,7 +61,7 @@ public final class Main extends JavaPlugin {
             if(newUpdate){
                 if(event.getPlayer().isOp() || event.getPlayer().hasPermission("staffchat.admin") || event.getPlayer().hasPermission("staffchat.*")){
                     Player player = event.getPlayer();
-                    player.sendMessage(ChatColor.GRAY + "A new update of StaffChat is now available! https://www.spigotmc.org/resources/staffchat.98171/");
+                    player.sendMessage(ChatColor.AQUA + "[StaffChat]" + ChatColor.GRAY + " A new update is available! Download here:" + ChatColor.BLUE + "\n» https://www.spigotmc.org/resources/staffchat.98171/");
                 }
             }
 
